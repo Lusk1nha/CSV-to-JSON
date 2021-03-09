@@ -32,7 +32,7 @@ body {
 
 #container,
 #converterContainer {
-  min-width: 225px;
+  min-width: 260px;
   width: 100%;
 
   display: flex;
@@ -51,7 +51,6 @@ body {
   flex-direction: column;
   align-items: center;
 
-  padding-top: 10px;
   margin-bottom: 20px;
 
   border: 1px solid yellow;
@@ -63,15 +62,30 @@ body {
 
 .title {
   width: 100%;
-  height: 55px;
+  height: 60px;
 
-  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
   color: yellow;
   font-size: 1.35em;
   letter-spacing: 0.3em;
 
-  border-bottom: 1px solid yellow;
+  border-bottom: 2px solid yellow;
+
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+
+  transition: color 0.4s;
+
+}
+
+.title:hover {
+  color: rgb(235, 179, 39);
 
 }
 
@@ -94,8 +108,13 @@ textarea {
 
 }
 
-.answer .title:has(+ textarea) {
-  background-color: aqua;
+textarea::selection {
+  background-color: black;
+  color: white;
+
+}
+
+.answer .title {
 
 }
 
@@ -126,7 +145,7 @@ button {
 
   cursor: pointer;
 
-  transition: background 0.5s, color 0.4s;
+  transition: background 0.4s, color 0.4s;
 
 }
 
@@ -136,5 +155,34 @@ button:hover {
   color: black;
 
   box-shadow: 0px 0px 6px yellow;
+
+}
+
+@media (min-width: 700px) {
+  body {
+    min-height: 100vh;
+
+  }
+
+  #container {
+    max-width: 1600px;
+
+  }
+
+  #converterContainer {
+    width: 82%;
+    flex-direction: row;
+
+    margin-bottom: 100px;
+
+  }
+
+  .answer,
+  .response {
+    height: 400px;
+
+    margin: 0 10px;
+
+  }
 
 }
