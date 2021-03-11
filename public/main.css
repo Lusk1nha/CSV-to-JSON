@@ -96,7 +96,7 @@ textarea {
   height: 100%;
 
   color: yellow;
-  font-size: 3.25vmin;
+  font-size: 5vmin;
   letter-spacing: 0.14em;
 
   padding: 15px 20px;
@@ -111,10 +111,6 @@ textarea {
 textarea::selection {
   background-color: black;
   color: white;
-
-}
-
-.answer .title {
 
 }
 
